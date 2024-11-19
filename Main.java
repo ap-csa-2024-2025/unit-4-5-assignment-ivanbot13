@@ -10,6 +10,8 @@ public class Main
     System.out.println("Input a number: ");
     int num = sc.nextInt();
     uprightNumberTriangle(num);
+    starTree();
+    multTable();
   }
 
   public static void printNTimes(String word, int N)
@@ -43,13 +45,26 @@ public class Main
     }
   }
 
-  public static void starTree()
+  public static void starTree() 
   {
-    
+    for (int rowTree = 0; rowTree < 9; rowTree++){
+      for (int spaces = 0; spaces < rowTree; spaces++){
+        System.out.print(" ");
+      }
+      for (int stars = rowTree; stars < 9; stars++){
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
   }
 
   public static void multTable()
   {
-    
+    for (int numWidth = 1; numWidth <= 12; numWidth++){
+      for (int numLength = 1; numLength <= 12; numLength++){
+        System.out.print( numWidth * numLength + "\t");
+      }
+    System.out.println();
+    }
   }
 }
